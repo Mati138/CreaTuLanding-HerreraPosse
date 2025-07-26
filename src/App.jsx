@@ -1,15 +1,13 @@
-import Header from "./Components/header/Header"
-import Footer from "./Components/footer/Footer"
-
+import ItemListContainer from './Components/ItemListContainer'
+import Navbar from './Components/NavBar/NavBar'
 
 function App() {
 
 
   return (
     <>
-      <Header />
-      <h1>Craft Store</h1>
-      <Footer />
+      <Navbar />
+      <ItemListContainer titulo={"Bienvenidos a mi E-commerce"} />
     </>
   )
 }
