@@ -1,6 +1,6 @@
 //Componentes
 import CartWidget from '../Cart/CartWidget'
-
+import { NavLink } from 'react-router-dom'
 import './navbar.css'
 
 const Navbar = () => {
@@ -10,13 +10,19 @@ const Navbar = () => {
         <div className="logo">Craft Store</div>
         <ul className="navLinks">
           <li>
-            <a href="">Inicio</a>
+            <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Inicio
+            </NavLink>
           </li>
           <li>
-            <a href="">Productos</a>
+            <NavLink to="/empresa" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Empresa
+            </NavLink>
           </li>
           <li>
-            <a href="">Contacto</a>
+            <NavLink to="/contacto" className={({ isActive }) => (isActive ? 'active' : '')}>
+              Contacto
+            </NavLink>
           </li>
         </ul>
         <CartWidget />

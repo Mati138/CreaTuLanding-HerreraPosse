@@ -1,0 +1,23 @@
+[
+    { "id": 1, "nombre": "Calco de Gato", "foto": "https://ejemplo.com/images/calco-gato.png", "categoria": "animales", "precio": 187 },
+    { "id": 2, "nombre": "Calco de Cactus", "foto": "https://ejemplo.com/images/calco-cactus.png", "categoria": "plantas", "precio": 234 },
+    { "id": 3, "nombre": "Calco de Astronauta", "foto": "https://ejemplo.com/images/calco-astronauta.png", "categoria": "espacio", "precio": 152 },
+    { "id": 4, "nombre": "Calco de Frutas", "foto": "https://ejemplo.com/images/calco-frutas.png", "categoria": "comida", "precio": 201 },
+    { "id": 5, "nombre": "Calco Retro de Auto", "foto": "https://ejemplo.com/images/calco-auto.png", "categoria": "transporte", "precio": 275 },
+    { "id": 6, "nombre": "Calco de Perro", "foto": "https://ejemplo.com/images/calco-perro.png", "categoria": "animales", "precio": 143 },
+    { "id": 7, "nombre": "Calco de Sol", "foto": "https://ejemplo.com/images/calco-sol.png", "categoria": "naturaleza", "precio": 165 },
+    { "id": 8, "nombre": "Calco de Luna", "foto": "https://ejemplo.com/images/calco-luna.png", "categoria": "espacio", "precio": 198 },
+    { "id": 9, "nombre": "Calco de Unicornio", "foto": "https://ejemplo.com/images/calco-unicornio.png", "categoria": "fantasia", "precio": 222 },
+    { "id": 10, "nombre": "Calco de Pizza", "foto": "https://ejemplo.com/images/calco-pizza.png", "categoria": "comida", "precio": 156 },
+    { "id": 11, "nombre": "Calco de Dinosaurio", "foto": "https://ejemplo.com/images/calco-dino.png", "categoria": "animales", "precio": 271 },
+    { "id": 12, "nombre": "Calco de Avión", "foto": "https://ejemplo.com/images/calco-avion.png", "categoria": "transporte", "precio": 189 },
+    { "id": 13, "nombre": "Calco de Montaña", "foto": "https://ejemplo.com/images/calco-montana.png", "categoria": "naturaleza", "precio": 214 },
+    { "id": 14, "nombre": "Calco de Robot", "foto": "https://ejemplo.com/images/calco-robot.png", "categoria": "tecnología", "precio": 199 },
+    { "id": 15, "nombre": "Calco de Corazón", "foto": "https://ejemplo.com/images/calco-corazon.png", "categoria": "simbolos", "precio": 122 },
+    { "id": 16, "nombre": "Calco de Estrella", "foto": "https://ejemplo.com/images/calco-estrella.png", "categoria": "naturaleza", "precio": 177 },
+    { "id": 17, "nombre": "Calco de Cohete", "foto": "https://ejemplo.com/images/calco-cohete.png", "categoria": "espacio", "precio": 203 },
+    { "id": 18, "nombre": "Calco de Cupcake", "foto": "https://ejemplo.com/images/calco-cupcake.png", "categoria": "comida", "precio": 165 },
+    { "id": 19, "nombre": "Calco de Guitarra", "foto": "https://ejemplo.com/images/calco-guitarra.png", "categoria": "música", "precio": 248 },
+    { "id": 20, "nombre": "Calco de Libélula", "foto": "https://ejemplo.com/images/calco-libelula.png", "categoria": "animales", "precio": 139 }
+  ]
+  
