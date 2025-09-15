@@ -2,7 +2,7 @@
 import { useParams } from 'react-router-dom' 
 import data from '../Data/datos.json'
 
-import '../Styles/sticker.css'
+
 
 const Stiker = () => {
   
