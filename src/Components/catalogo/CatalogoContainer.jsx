@@ -5,18 +5,28 @@ import { useEffect, useState } from "react";
 
 
 const CatalogoContainer = () => {
-  const [productos, setProductos]= useState([])
+  const [productos, setProductos]= useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { categoriaId } = useParams();
 
   useEffect(()=>{
+    setLoading(true);
     servicies.products.getAll()
       .then( data => setProductos(data))
-  },[])
-    
+      .finally(() => setLoading(false))
+  },[]);
+  
   const productosFiltrados = categoriaId
   ? productos.filter(prod => prod.categoria === categoriaId)
   : productos;
+
+  if (loading) {
+    return <p>Cargando stickers...</p>; 
+  }
+  if (!productos) {
+    return <p>No se encontraron los stickers.</p>; 
+}
 
   return(
     <>

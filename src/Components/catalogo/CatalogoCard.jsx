@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom"
 import "../../Styles/catalogo.css"
 
 const CatalogoCard = ({productos}) =>{
     return(
         <>
             <article className="card">
-                <img src="https://via.placeholder.com/260x180.png?text=Producto" alt="Producto"/>
-                <div class="card-content">
-                    <h3 class="card-title">{productos.nombre}</h3>
-                    <p class="card-description">
+                <img src="https://via.placeholder.com/260x180.png?text=Producto" alt={productos.nombre}/>
+                <div className="card-content">
+                    <h3 className="card-title">{productos.nombre}</h3>
+                    {/* <p class="card-description">
                        {productos.descripcion}
-                    </p>
-                    <div class="price-stock">
-                        <span class="price">${productos.precio}</span>
-                        <span class="stock">Stock: {productos.stock}</span>
+                    </p> */}
+                    <div className="price-stock">
+                        <span className="price">${productos.precio}</span>
+                        <span className="stock">Stock: {productos.stock}</span>
                     </div>
-                    <button class="btn">Agregar al carrito</button>
+                    <Link to={`/sticker/${productos.id}`} className="btn">Ver calco</Link>
                 </div>
             </article>
         </>

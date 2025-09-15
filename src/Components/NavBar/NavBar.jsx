@@ -7,11 +7,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="nav">
-        <div className="logo">
-          <Link to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Craft Store
-          </Link>
-        </div>
+        <Link className="logo" to="/">
+          Craft Store
+        </Link>
         <ul className="navLinks">
           <li>
             <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>

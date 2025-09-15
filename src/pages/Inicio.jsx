@@ -5,9 +5,9 @@ const Inicio = () => {
 
   return (
     <>
-       <div className="container">
+      <div className="container">
             
-        </div>
+      </div>
     </>
   )
 }
