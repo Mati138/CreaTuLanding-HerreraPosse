@@ -4,6 +4,8 @@ import Inicio from './pages/Inicio'
 import Catalogo from './pages/Catalogo'
 import Sticker from './pages/Sticker'
 import NoEncontrado from './pages/NoEncontrado'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 const Rutas = () => {
   return (
@@ -14,6 +16,8 @@ const Rutas = () => {
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/catalogo/:categoriaId" element={<Catalogo />} />
         <Route path="sticker/:idSticker" element={<Sticker />} />
+        <Route path="/carrito" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NoEncontrado />} />
       </Routes>
     </>

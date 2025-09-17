@@ -8,9 +8,6 @@ const CatalogoCard = ({productos}) =>{
                 <img src="https://via.placeholder.com/260x180.png?text=Producto" alt={productos.nombre}/>
                 <div className="card-content">
                     <h3 className="card-title">{productos.nombre}</h3>
-                    {/* <p class="card-description">
-                       {productos.descripcion}
-                    </p> */}
                     <div className="price-stock">
                         <span className="price">${productos.precio}</span>
                         <span className="stock">Stock: {productos.stock}</span>

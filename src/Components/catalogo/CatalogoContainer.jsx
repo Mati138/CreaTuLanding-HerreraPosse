@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import CatalogoList from "./catalogoList";
-import { servicies }from '../../services'
+import { services }from '../../services'
 import { useEffect, useState } from "react";
 
 
@@ -12,7 +12,7 @@ const CatalogoContainer = () => {
 
   useEffect(()=>{
     setLoading(true);
-    servicies.products.getAll()
+    services.products.getAll()
       .then( data => setProductos(data))
       .finally(() => setLoading(false))
   },[]);

@@ -1,38 +1,53 @@
+import { useState } from "react";
+import Counter from "../../Components/counter/Counter.jsx";
 
-const StickerDetail = ({sticker}) =>{
-    return(
-        <>
-        
-        <div class="product-detail">
+const StickerDetail = ({ sticker, onAdd, agregado, stockRestante }) => {
+  const [cantidad, setCantidad] = useState(1); // cantidad elegida
 
-            <div class="product-image">
-            <img src="https://via.placeholder.com/500x500.png?text=Sticker" alt={sticker.nombre}/>
-            </div>
+  return (
+    <div className="product-detail">
+      <div className="product-image">
+        <img
+          src="https://via.placeholder.com/500x500.png?text=Sticker"
+          alt={sticker.nombre}
+        />
+      </div>
 
-            <div class="product-info">
-            <h1 class="product-title">{sticker.nombre}</h1>
+      <div className="product-info">
+        <h1 className="product-title">{sticker.nombre}</h1>
+        <p className="product-description">{sticker.descripcion}</p>
 
-            <p class="product-description">
-                {sticker.descripcion}
-            </p>
-
-            <div class="price-stock">
-                <span class="price">${sticker.precio}</span>
-                <span class="stock">Stock: {sticker.stock}</span>
-            </div>
-
-            <div class="quantity">
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" min="1" value="1" />
-            </div>
-
-            <button class="btn-add">Agregar al carrito</button>
-            </div>
+        <div className="price-stock">
+          <span className="price">${sticker.precio}</span>
+          <span className="stock">Stock disponible: {stockRestante}</span>
         </div>
-        
 
-        </>
-    )
-}
+        <div className="quantity">
+          <label htmlFor="cantidad">Cantidad:</label>
+          {stockRestante === 0 ? (
+            <p>Producto sin stock</p>
+          ) : (
+            <Counter
+              stock={stockRestante}
+              value={cantidad}
+              onChange={setCantidad}
+            />
+          )}
+        </div>
 
-export default StickerDetail
+        <button
+          className="btn-add"
+          onClick={() => onAdd(cantidad)}
+          disabled={stockRestante === 0}
+        >
+          Agregar al carrito
+        </button>
+
+        {agregado && <p>Producto agregado al carrito</p>}
+      </div>
+    </div>
+  );
+};
+
+export default StickerDetail;
+

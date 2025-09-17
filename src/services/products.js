@@ -28,8 +28,8 @@ const getById = async (id) =>{
         // Verificar si existe
         if (docSnap.exists()) {
             const sticker = docSnap.data()
-            return sticker
-        //   return { id: docSnap.id, ...docSnap.data() };
+            // return sticker
+          return { id: docSnap.id, ...docSnap.data() };
         } else {
           console.log("No existe un producto con ese ID");
           return null;
