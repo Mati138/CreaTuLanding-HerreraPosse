@@ -1,4 +1,4 @@
-import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc, updateDoc, increment } from "firebase/firestore";
 import { utils } from "../utils";
 
 
@@ -40,5 +40,12 @@ const getById = async (id) =>{
     }
 }
 
+const decrementStock = async (productId, cantidad) => {
+    const productRef = doc(utils.db, "productos", productId);
+    await updateDoc(productRef, {
+      stock: increment(-cantidad)
+    });
+};
 
-export const products = { getAll, getById }
+
+export const products = { getAll, getById, decrementStock }

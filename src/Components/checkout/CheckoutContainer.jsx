@@ -18,13 +18,27 @@ const CheckoutContainer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const id = await services.orders.create({ cliente, items: cart, total: totalCompra() });
+      // 1. Crear orden en Firestore
+      const id = await services.orders.create({
+        cliente,
+        items: cart,
+        total: totalCompra(),
+      });
+  
+      // 2. Actualizar stock de cada producto comprado
+      const updates = cart.map(item =>
+        services.products.decrementStock(item.id, item.cantidad) // ojo: usa la prop real (cantidad o quantity)
+      );
+      await Promise.all(updates);
+  
+      // 3. Limpiar y mostrar id de la orden
       setOrdenId(id);
       clearCart();
     } catch (error) {
-      console.error("Error al generar la orden: ", error);
+      console.error("Error al generar la orden o actualizar stock: ", error);
     }
   };
+  
 
   return (
     <>
@@ -32,7 +46,6 @@ const CheckoutContainer = () => {
         <p className="compraRealizada">Compra realizada! Tu ID de orden es: {ordenId}</p>
       ) : (
         <div className="">
-          <CheckoutSummary total={totalCompra} articulos={cart}/>
           <CheckoutForm
           cliente={cliente} 
           onChange={handleChange} 

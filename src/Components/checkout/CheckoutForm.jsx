@@ -1,11 +1,9 @@
 import '../../Styles/checkout.css'
 
-const CheckoutForm = ({ cliente, total, onChange, onSubmit }) => {
-  console.log(total)
+const CheckoutForm = ({ cliente, onChange, onSubmit }) => {
     return (
       <div className="checkout-form">
         <h2>Checkout</h2>
-        <h4>Total a pagar: ${total}</h4>
         <form onSubmit={onSubmit}>
           <input
             name="nombre"
